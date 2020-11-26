@@ -23,8 +23,9 @@ export class TweetComponent implements OnInit {
 
   cargarTweet(){
     this.tweetService.tweetAll().subscribe(tweet =>{
-
-      this.listaTweet.push(tweet);
+      tweet.forEach(element => {
+        this.listaTweet.push(element);
+      });
     });
   }
 }

@@ -23,7 +23,7 @@ import { FormRegistroComponent } from './component/form-registro/form-registro.c
 import {Routes,RouterModule} from '@angular/router';
 import { HeaderComponent } from './component/header/header.component';
 import { TweetComponent } from './component/tweet/tweet.component';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 const routes:Routes =[
   {path: '',component:FormLoginComponent},
   {path: 'registro',component:FormRegistroComponent},
@@ -54,6 +54,7 @@ const routes:Routes =[
     MatTableModule,
     MatCardModule,
     MatButtonModule,
+    MatGridListModule
   ],
   providers: [ValidacionService],
   bootstrap: [AppComponent]

@@ -19,8 +19,8 @@ export class TweetService {
 
   constructor(private http:HttpClient) { }
 
-  tweetAll(): Observable<TweetResponse>{
-    return this.http.get<TweetResponse>(
+  tweetAll(): Observable<TweetResponse[]>{
+    return this.http.get<TweetResponse[]>(
       LISTADO_URL,
       httpOptions
           );
