@@ -20,14 +20,27 @@ import {MatButtonModule} from '@angular/material/button';
 
 import {MatInputModule} from '@angular/material/input';
 import { FormRegistroComponent } from './component/form-registro/form-registro.component';
+import {Routes,RouterModule} from '@angular/router';
+import { HeaderComponent } from './component/header/header.component';
+import { TweetComponent } from './component/tweet/tweet.component';
+
+const routes:Routes =[
+  {path: '',component:FormLoginComponent},
+  {path: 'registro',component:FormRegistroComponent},
+  {path:'allTweet',component:TweetComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
     FormLoginComponent,
-    FormRegistroComponent
+    FormRegistroComponent,
+    HeaderComponent,
+    TweetComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,

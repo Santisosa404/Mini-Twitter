@@ -1,8 +1,8 @@
-<div>
-<mat-form-field appearance="fill">
-  <mat-label>Email</mat-label>
-  <input matInput type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true">
-</mat-form-field>
+<div id="contenedorFormulario">
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true">
+  </mat-form-field>
 </div>
 <div [hidden]="em.valid || em.pristine" class="alert alert-danger">
   <p *ngIf="em.errors?.email">El campo email debe ser correcto.</p>
@@ -17,6 +17,8 @@
   <p *ngIf="pwd.errors?.required"> El campo contraseña es requerido.</p>
 </div>
 
-<input  type="button" (click)="realizarLogin()" value="Login" />
+<input type="button" (click)="realizarLogin()" routerLink="/allTweet" value="Login" />
 
-<!--    -->
+  <div>
+
+

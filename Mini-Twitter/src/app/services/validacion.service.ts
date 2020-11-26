@@ -10,7 +10,8 @@ const LOGIN_URL = 'https://www.minitwitter.com:3001/apiv1/auth/login';
 const SIGNUP_URL = 'https://www.minitwitter.com:3001/apiv1/auth/signup';
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json'
+    'Content-Type':  'application/json',
+    'Authorization': 'Bearer ' + localStorage.getItem('token')
   })
 };
 @Injectable({
