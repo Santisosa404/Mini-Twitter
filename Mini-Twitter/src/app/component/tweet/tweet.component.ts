@@ -28,4 +28,9 @@ export class TweetComponent implements OnInit {
       });
     });
   }
+  darLike(id:number){
+    this.tweetService.likeTweet(id);
+    alert("Tweet marcado como favorito");
+
+  }
 }

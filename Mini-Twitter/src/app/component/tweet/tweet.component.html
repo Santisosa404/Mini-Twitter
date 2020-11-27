@@ -17,7 +17,7 @@
       {{elementos.likes.length}}
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1" [rowspan]="1">
-        <mat-icon >favorite_border</mat-icon>
+        <mat-icon (click)="darLike(elementos.id)">favorite_border</mat-icon>
     </mat-grid-tile>
   </div>
 </mat-grid-list>
