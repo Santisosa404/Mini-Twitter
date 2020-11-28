@@ -28,6 +28,7 @@ export class TweetService {
           );
   }
   likeTweet(id:number):Observable<TweetDto>{
-    return this.http.post<TweetDto>(LIKE_URL,NONE_TYPE,httpOptions);
+
+    return this.http.post<TweetDto>(LIKE_URL+id,NONE_TYPE,httpOptions);
   }
 }
