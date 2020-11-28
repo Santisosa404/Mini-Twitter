@@ -1,0 +1,23 @@
+<mat-grid-list cols="4" rowHeight="100px">
+  <div *ngFor="let elementos of columsToDisplay">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      {{elementos}}
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
+<mat-grid-list cols="4" rowHeight="100px">
+  <div *ngFor="let elementos of listaTweet">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      {{elementos.user.username}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      {{elementos.mensaje}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      {{elementos.likes.length}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-icon (click)="darLike(elementos.id)">favorite_border</mat-icon>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
